@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+
+
+
+
+
+
+
+
+ {% block content %}
+
+
+
+ {% for member in object_list %}
+        
+
+<div class="container ">
+        
+       <div class="row ">
+                
+            <div class="col md 6">
+            <div class="card">
+                <img src="https://images.pexels.com/photos/97077/pexels-photo-97077.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="card-img-top" alt="...">
+                <div class="card-header">
+                    {{object_list }} {{ member.last_name }}
+                </div>
+            
+                <div class="cardbody">
+                    <h5 class="card-title">{{ member.email }}  </h5>
+            </div>
+            </div>
+            </div>
+            
+            <div class="col md 6">
+                <div class="card">
+                    <img src="https://images.pexels.com/photos/97077/pexels-photo-97077.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="card-img-top" alt="...">
+              <div class="card-header">
+                    {{ member.first_name }} {{ member.last_name }}
+                </div>
+            
+                <div class="cardbody">
+                    <h5 class="card-title">{{ member.email }}  </h5>
+            </div>
+                </div>
+                </div>
+            
+            </div>
+        </div>
+        <br>
+
+
+
+
+        
+
+
+        
+              
+
+        
+
+
+
+ {% endfor %}
+ {% endblock %}
+
+
+
+
+

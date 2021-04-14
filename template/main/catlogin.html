@@ -1,0 +1,144 @@
+
+{% extends "base.html" %}
+{% load static  %}
+ 
+
+
+{% block content %}
+ 
+<style>
+
+
+
+  body{
+
+	/* background-size: 1920px 1080px;
+	background-image: url(https://marketplace.canva.com/MADGxyifIOY/4/screen_2x/canva-loginal-MADGxyifIOY.jpg) 
+     */
+	
+	 background: linear-gradient(-70deg,  hsla(49, 24%, 73%, 0.739) 60%, rgba(0, 0, 0, 0) 30%), url(https://images.pexels.com/photos/1450360/pexels-photo-1450360.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+
+
+	}  
+#x{
+
+	background: rgba(0, 0, 0, 0);
+  backdrop-filter: saturate(180%) blur(10px);
+
+}
+
+</style>
+
+
+<div   >dfdffdfdf</div>
+
+ 
+<body>
+	<div class="container h-100" id="x">
+		<div class="d-flex justify-content-center h-100">
+			<div class="user_card">
+				<div class="d-flex justify-content-center">
+
+
+					<h3 id="form-title">User login</h3>
+				</div>
+				<div class="d-flex justify-content-center form_container">
+					<form method="POST" action=" ">
+						{% csrf_token %}
+						<div class="input-group mb-3">
+							<div class="input-group-append">
+								<span class="input-group-text"><h6 class="fa fa-user" aria-hidden="true"></h6></span>
+							</div>
+							 
+							<input type="text" name="username" placeholder="Username..." class="form-control">
+						</div>
+
+						<div class="input-group mb-6">
+							<div class="input-group-append">
+								<span class="input-group-text "><h6 class="fas fa-key"></h6></span>
+							</div>
+
+								<input type="password" name="password" placeholder="Password..." class="form-control"  >
+								
+						</div>
+
+							<div class="d-flex justify-content-center mt-3 login_container">
+				 				<input class="btn btn-success" type="submit" value="Login">
+				   			</div>
+					</form>
+
+				</div>
+                <br>
+				{% for message in messages %}
+					 
+					<div class="alert alert-danger" role="alert">
+						{{message}}
+					  </div>
+                 
+					  
+
+                
+					  <script>
+
+						alert("{{message}}");
+					  
+					  </script>
+
+
+				{% endfor %}	
+				
+				
+
+
+				
+		
+				<!-- <div class="mt-4">
+					<div class="d-flex justify-content-center links">
+						Don't have an account? <a href="{% url 'catvai' %}" class="btn btn-primary"  style="margin-left: 10px; color: rgb(237, 220, 253); margin-bottom: 50px;"> Sign Up </a>
+					</div>
+					 
+				</div> -->
+
+				<div class="form-group mt-4">
+					<label  >Don't have an account? <a href="{% url 'catvai' %}" class="btn btn-primary"  style="margin-left: 10px; color: rgb(237, 220, 253); margin-bottom: 0px;"> Sign Up </a></label>
+					<div class="d-flex justify-content-center links">
+						
+					</div>
+				</div>
+				<br>
+				 
+			</div>
+		</div>
+	</div>
+</body>
+
+ 
+
+ 
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 

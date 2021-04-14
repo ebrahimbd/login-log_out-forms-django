@@ -1,0 +1,89 @@
+{% extends "base.html" %}
+
+
+ {% block content %}
+
+
+
+
+ <div class="container">
+     <div class="card"> 
+    
+    {{love.title}} <br>
+    {{ love.description }}
+
+    {% for love in object_list  %}
+    {{ object.description }}
+        {% endfor %}
+    </div>
+
+   
+    <div class="row">
+        
+ 
+             <div class="col md 6">
+                 
+                
+                 <div class="card">
+                    {% for Member in object_list %}
+                     <img src="https://images.pexels.com/photos/97077/pexels-photo-97077.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="card-img-top" alt="...">
+                     <div class="card-header">
+                         {{ Member.title }} {{ Member.description }}
+                     </div>
+                 
+                     <div class="cardbody">
+                         <h5 class="card-title"> {{ Member.title }}  </h5>
+                     </div>
+                     {% endfor %}
+                 </div>
+                
+             </div>
+           
+            
+
+
+        
+         
+            
+            <div class="col md 6">
+                {% for  newproduct in object_list %}
+                {{newproduct }}
+                <form action="sem" method='GET' > {% csrf_token %}
+                    {{newproduct.description }}: <input  name="num1"><br>
+                    {{newproduct.description }} : <input type="text" name="num2"><br>
+                     
+                    <input type='submit' value='Save' />
+                <div class="card">
+                    <img src="https://images.pexels.com/photos/97077/pexels-photo-97077.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="card-img-top" alt="...">
+                    <div class="card-header">
+                        {{newproduct.tittle }} {{ newproduct.price }}
+                    {{newproduct.description }} 
+                    </div>
+                
+                    <div class="cardbody">
+                        <h5 class="card-title">{{ newproduct.summary }}  </h5>
+                    </div>
+                </div>
+                {% endfor %}
+            </div
+          
+        
+
+    </div>
+ </div>
+ 
+
+
+
+
+
+
+ 
+{% endblock %}
+
+
+
+
+
+
+

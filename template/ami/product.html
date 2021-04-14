@@ -1,0 +1,123 @@
+{% extends "base.html" %}
+
+
+        {% block content %}
+
+
+
+        {% for member in object_list %}
+
+        <h1>   {{ member.last_name }}</h1>
+
+
+
+
+
+        
+        {% endfor %}
+
+
+
+
+
+
+        {% for  newproduct in object_list %}
+        
+        <h1>   {{ member.last_name }}
+          {{newproduct.description }} </h1>
+         
+        <form action="sem" method='GET' > {% csrf_token %}
+          {{newproduct.description }}: <input  name="num1"><br>
+          {{newproduct.description }} : <input type="text" name="num2"><br>
+           
+          <input type='submit' value='Save' />
+          </form>
+
+
+
+
+        <div class="container ">
+        
+            <div class="row ">
+                
+            <div class="col md 6">
+            <div class="card">
+                <img src="https://images.pexels.com/photos/97077/pexels-photo-97077.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="card-img-top" alt="...">
+                <div class="card-header">
+                    {{newproduct.tittle }} {{ newproduct.price }}
+                    {{newproduct.description }} 
+                </div>
+            
+                <div class="cardbody">
+                    <h5 class="card-title">{{ newproduct.summary }}  </h5>
+            </div>
+            </div>
+            </div>
+            
+            <div class="col md 6">
+                <div class="card">
+                    <img src="https://images.pexels.com/photos/97077/pexels-photo-97077.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="card-img-top" alt="...">
+              <div class="card-header">
+                {{newproduct.tittle }} {{ newproduct.price }}
+                {{newproduct.description }} 
+                </div>
+            
+                <div class="cardbody">
+                    <h5 class="card-title">{{newproduct.description }}   </h5>
+            </div>
+                </div>
+                </div>
+            
+            </div>
+        </div>
+        <br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!-- <div class="container">
+      
+            <div class="card">
+                <div class="card-header">
+                    {{ member.first_name }} {{ member.last_name }}
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">{{ member.email }}  </h5>
+                  <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                   
+                </div>
+                </div>
+              </div> -->
+     
+        
+     
+
+
+
+
+
+
+
+
+ {% endfor %}
+{% endblock %}
+
+
+
+
+
+
+
