@@ -1,0 +1,216 @@
+
+
+
+{% extends "base.html" %}
+{% load static  %}
+ 
+
+
+{% block content %}
+ 
+<style>
+
+
+
+  body{
+
+	/* background-size: 1920px 1080px;
+	background-image: url(https://marketplace.canva.com/MADGxyifIOY/4/screen_2x/canva-loginal-MADGxyifIOY.jpg) 
+     */
+	
+	 background:  url(https://images.pexels.com/photos/4198029/pexels-photo-4198029.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+
+	}  
+
+
+
+
+#x{
+
+	background: rgba(0, 0, 0, 0);
+      backdrop-filter: saturate(180%) blur(10px);
+
+}
+
+</style>
+
+
+ 
+
+ 
+<body>
+	<div class="container h-100" id="x">
+		<div class="d-flex justify-content-center h-100">
+			<div class="user_card">
+				 
+				  <p><u><strong>{{form.errors}}</strong></u></p>
+				<div class="d-flex justify-content-center form_container">
+
+					<form method="POST" action="">
+						{% csrf_token %}
+                        
+                        <div class="control-group">
+							<label class="control-label" for="Password2">Author Full name</label>
+							<div class="controls">
+								<span class="input-group-text"> <i class="fas fa-user"></i> {{form.name}}</span>
+							
+							  <!-- <p class="help-block">last_name</p> -->
+							</div>
+						 </div>
+
+
+						<div class="control-group">
+							<label class="control-label" for="Username">Author title</label>
+							<div class="controls">
+								<span class="input-group-text"> <i class="fas fa-user"></i> {{form.title}}</span>
+							
+							  <!-- <p class="help-block">Please provide Username</p> -->
+							</div>
+						 </div>
+
+						<div class="control-group">
+							<label class="control-label" for="email">Please provide birth_date</label>
+							<div class="controls">
+								<span class="input-group-text"> <i class="fas fa-envelope-square"></i> {{form.birth_date}}</span>
+							
+							  <!-- <p class="help-block">Please provide your E-mail</p> -->
+							</div>
+						 </div>
+						<!-- <div class="control-group">
+							<label class="control-label" for="Password1">Please provide your Password</label>
+							<div class="controls">
+								<span class="input-group-text"> <i class="fas fa-key"></i> 	{{form.password1}}</span>
+							
+							  <p class="help-block">Please provide your Password</p>
+							</div>
+						 </div>
+						<div class="control-group">
+							<label class="control-label" for="Password2">Confirm password</label>
+							<div class="controls">
+								<span class="input-group-text"> <i class="fas fa-key"></i> 	{{form.password2}}</span>
+							
+							 
+							</div>
+						 </div>
+						 -->
+
+                       
+
+				   		<div class="d-flex justify-content-center mt-3 login_container">
+				 			<input class="btn btn-success" type="submit" value=" ">
+				   		</div><br>
+
+  
+
+						   <div class="d-flex justify-content-center links"><p  style="padding-right: 10px;">Already have an account?</p>
+							<a href="{% url 'catlogin' %}" class="btn btn-success">LOG IN </a>
+					  </div><br>
+						   <div class="d-flex justify-content-center links">
+							<p  style="padding-right: 10px;">Go to the home page</p>
+							 <a href="{% url 'home' %}" class="btn btn-success" style="margin-bottom: 50px;" > Home page</a>
+						</div>
+					</form>
+				</div>
+
+
+				
+					
+
+				
+			</div>
+		</div>
+	</div>
+
+	
+
+</body>
+
+ 
+
+
+
+
+ 
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

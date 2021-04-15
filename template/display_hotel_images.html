@@ -1,0 +1,138 @@
+
+{% extends "base.html" %}
+
+ 
+
+{% block content %}
+<style>
+
+
+
+	body{
+  
+	  /* background-size: 1920px 1080px;
+	  background-image: url(https://marketplace.canva.com/MADGxyifIOY/4/screen_2x/canva-loginal-MADGxyifIOY.jpg) 
+	   */
+	  
+	   background: linear-gradient(-70deg,  hsla(49, 24%, 73%, 0.739) 60%, rgba(0, 0, 0, 0) 30%), url(https://images.pexels.com/photos/1450360/pexels-photo-1450360.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+  
+  
+	  }  
+  #x{
+  
+	  background: rgba(0, 0, 0, 0);
+	backdrop-filter: saturate(180%) blur(10px);
+
+  
+  }
+  
+}
+  </style>
+  
+ 
+<body>
+
+
+	{% for hotel in hotel_images %}
+<div class="cointainer" id="x">
+
+	<div class="card"  style="right: 0px; left: 500px; width: 400px; border: 3px solid #73AD21; padding: 10px;  margin-top: 100px; margin-bottom:50px">
+		<img class="card-img-top" src="{{ hotel.hotel_Main_Img.url }}" alt="Card image cap">
+		<div class="card-body">
+		  <p class="card-text">{{ hotel.name }}</p>
+		</div>
+	  </div>
+</div>
+
+
+
+	
+	  
+ {% endfor %}
+ 
+		
+
+
+
+	</div>
+</body>
+
+ 
+ 
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Hotel Images</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+	</script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
+	</script>
+</head>
+<body>
+    
+ 
+	{% for hotel in hotel_images %}
+			<div class="col-md-4">
+					{{ hotel.name }}
+					<img src="{{ hotel.hotel_Main_Img.url }}" class="img-responsive" style="width: 100%; float: left; margin-right: 10px;" />
+			</div>
+	{% endfor %}
+
+   
+ 
+
+</body>
+</html> -->
