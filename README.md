@@ -15,7 +15,7 @@ cd login-log_out-forms-django
 Run
 
 ```python
-pip install -r requirements.txt #install required packages
+
 python manage.py migrate # run first migration
 python manage.py runserver # run the server
 ```
